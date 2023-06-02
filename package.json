@@ -10,8 +10,7 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "start": "ts-node index.ts",
-    "start2": "ts-node test/src/index.ts"
+    "start": "ts-node index.ts"
   },
   "name": "ts",
   "version": "1.0.0",

@@ -10,6 +10,8 @@
 //   SELF_DECLARED_DEPS_METADATA,
 // } from "./nest";
 
+import { type } from "os";
+
 // class B {}
 
 // @EmptyClass()
@@ -27,16 +29,30 @@
 // console.log(Reflect.getMetadataKeys(B));
 // // console.log(Reflect.getMetadata("test", A));
 
-const t = (o) => JSON.parse(JSON.stringify(o));
-const tMap = (o) =>
-  JSON.stringify(Object.fromEntries(new Map(Object.entries(o))));
+// const t = (o) => JSON.parse(JSON.stringify(o));
+// const tMap = (o) =>
+//   JSON.stringify(Object.fromEntries(new Map(Object.entries(o))));
 
-const obj = {
-  k: [tMap({ a: 1, c: 3, b: 2 }), tMap({ a: 1, b: 2, c: 3 })],
+// const obj = {
+//   k: [tMap({ a: 1, c: 3, b: 2 }), tMap({ a: 1, b: 2, c: 3 })],
+// };
+
+// console.log(JSON.stringify(obj));
+
+// const a = {
+//   a: () => {},
+// };
+
+const k = (a) => {
+  if (typeof a === "number") {
+    console.log("num");
+  }
+
+  if (typeof a === "string") {
+    console.log("str");
+  }
 };
 
-console.log(JSON.stringify(obj));
+k({ a: "3" });
 
-const a = {
-  a: () => {},
-};
+// console.log(parseInt(a as unknown as string));
