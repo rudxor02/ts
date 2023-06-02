@@ -9,13 +9,8 @@
         "experimentalDecorators": true,
         "target": "es6",
         "sourceMap": true,
-        "allowJs": true,
+        "allowJs": true
     },
-    "include" : [
-        "index.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/node_modules/*"
-    ]
+    "include": ["index.ts"],
+    "exclude": ["node_modules", "**/node_modules/*"]
 }
